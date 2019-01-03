@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		454C165B21DC92B1004409CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C165A21DC92B1004409CF /* AppDelegate.m */; };
-		454C165E21DC92B1004409CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C165D21DC92B1004409CF /* ViewController.m */; };
 		454C166121DC92B1004409CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C165F21DC92B1004409CF /* Main.storyboard */; };
 		454C166321DC92B2004409CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 454C166221DC92B2004409CF /* Assets.xcassets */; };
 		454C166621DC92B2004409CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C166421DC92B2004409CF /* LaunchScreen.storyboard */; };
 		454C166921DC92B2004409CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C166821DC92B2004409CF /* main.m */; };
 		454C167321DC92B2004409CF /* demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C167221DC92B2004409CF /* demoTests.m */; };
 		454C167E21DC92B2004409CF /* demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C167D21DC92B2004409CF /* demoUITests.m */; };
+		454C169821DCAB62004409CF /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C169621DCAB62004409CF /* LoginController.m */; };
+		454C169B21DCAEB7004409CF /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 454C169A21DCAEB7004409CF /* logo.gif */; };
+		454C16A221DCD1B2004409CF /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 454C16A121DCD1B2004409CF /* home.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		454C165621DC92B1004409CF /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		454C165921DC92B1004409CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		454C165A21DC92B1004409CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		454C165C21DC92B1004409CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		454C165D21DC92B1004409CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		454C166021DC92B1004409CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		454C166221DC92B2004409CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		454C166521DC92B2004409CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,10 @@
 		454C167921DC92B2004409CF /* demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		454C167D21DC92B2004409CF /* demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demoUITests.m; sourceTree = "<group>"; };
 		454C167F21DC92B2004409CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		454C169621DCAB62004409CF /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		454C169721DCAB62004409CF /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		454C169A21DCAEB7004409CF /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logo.gif; sourceTree = "<group>"; };
+		454C16A121DCD1B2004409CF /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,10 @@
 		454C165821DC92B1004409CF /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				454C169921DCAEB7004409CF /* image */,
+				454C169521DCAB62004409CF /* Controller */,
 				454C165921DC92B1004409CF /* AppDelegate.h */,
 				454C165A21DC92B1004409CF /* AppDelegate.m */,
-				454C165C21DC92B1004409CF /* ViewController.h */,
-				454C165D21DC92B1004409CF /* ViewController.m */,
 				454C165F21DC92B1004409CF /* Main.storyboard */,
 				454C166221DC92B2004409CF /* Assets.xcassets */,
 				454C166421DC92B2004409CF /* LaunchScreen.storyboard */,
@@ -130,6 +134,24 @@
 				454C167F21DC92B2004409CF /* Info.plist */,
 			);
 			path = demoUITests;
+			sourceTree = "<group>";
+		};
+		454C169521DCAB62004409CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				454C169621DCAB62004409CF /* LoginController.m */,
+				454C169721DCAB62004409CF /* LoginController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		454C169921DCAEB7004409CF /* image */ = {
+			isa = PBXGroup;
+			children = (
+				454C16A121DCD1B2004409CF /* home.png */,
+				454C169A21DCAEB7004409CF /* logo.gif */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				454C166621DC92B2004409CF /* LaunchScreen.storyboard in Resources */,
+				454C169B21DCAEB7004409CF /* logo.gif in Resources */,
+				454C16A221DCD1B2004409CF /* home.png in Resources */,
 				454C166321DC92B2004409CF /* Assets.xcassets in Resources */,
 				454C166121DC92B1004409CF /* Main.storyboard in Resources */,
 			);
@@ -262,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				454C165E21DC92B1004409CF /* ViewController.m in Sources */,
+				454C169821DCAB62004409CF /* LoginController.m in Sources */,
 				454C166921DC92B2004409CF /* main.m in Sources */,
 				454C165B21DC92B1004409CF /* AppDelegate.m in Sources */,
 			);
@@ -434,13 +458,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42EKK2R463;
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.4;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -450,13 +477,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42EKK2R463;
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.4;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

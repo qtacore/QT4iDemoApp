@@ -14,10 +14,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface LoginController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic,strong) UILabel * label;
+@property (nonatomic,strong) UITextField * account;
+@property (nonatomic,strong) UITextField * password;
+@property (nonatomic,strong) UIButton * loginButton;
 
 @end
-

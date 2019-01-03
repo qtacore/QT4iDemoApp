@@ -1,12 +1,19 @@
-//
-//  AppDelegate.m
-//  demo
-//
-//  Created by hellertang on 2019/1/2.
-//  Copyright © 2019年 hellertang. All rights reserved.
-//
+/**
+ * Tencent is pleased to support the open source community by making QTA available.
+ * Copyright (C) 2016THL A29 Limited, a Tencent company. All rights reserved.
+ * Licensed under the BSD 3-Clause License (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at
+ *
+ * https://opensource.org/licenses/BSD-3-Clause
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed
+ * under the License is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
 #import "AppDelegate.h"
+#import "LoginController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +23,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //创建窗口对象
+    self.window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
+    LoginController* vcLogin = [[LoginController alloc] init];
+    vcLogin.title = @"自动化";
+    UINavigationController* navLogin = [[UINavigationController alloc]initWithRootViewController:vcLogin];
+    UITabBarItem *LoginItem = [[UITabBarItem alloc] initWithTitle:@"demo" image: [UIImage imageNamed:@"home.png"] selectedImage:nil];
+    navLogin.tabBarItem = LoginItem;
+    
+    NSArray* arrayVC =[ NSArray arrayWithObjects:navLogin, nil];
+    UITabBarController* tbc =[[UITabBarController alloc]init];
+    
+    tbc.viewControllers = arrayVC;
+    tbc.tabBar.translucent = NO;
+    self.window.rootViewController = tbc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
