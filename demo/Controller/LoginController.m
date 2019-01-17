@@ -24,7 +24,8 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithRed:51/255.0 green:204/255.0 blue:255/255.0 alpha:1]];
     
-    _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, self.view.frame.size.width-40, 70)];
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(26, 200, self.view.frame.size.width-52, 70)];
+    _label.accessibilityIdentifier = @"logo";
     UIImage* image = [UIImage imageNamed:@"logo.gif"];
     NSTextAttachment* textAttach = [[NSTextAttachment alloc] init];
     textAttach.image = image;
@@ -33,7 +34,8 @@
     [self.view addSubview:_label];
     
     
-    _account=[[UITextField alloc] initWithFrame:CGRectMake(40, 220, self.view.frame.size.width-80, 50)];
+    _account=[[UITextField alloc] initWithFrame:CGRectMake(40, 300, self.view.frame.size.width-80, 50)];
+    _account.accessibilityIdentifier = @"email";
     _account.backgroundColor=[UIColor whiteColor];
     _account.placeholder=[NSString stringWithFormat:@"Email"];
     _account.borderStyle= UITextBorderStyleRoundedRect;
@@ -41,16 +43,17 @@
     _account.isAccessibilityElement = TRUE;
     [self.view addSubview:_account];
     
-    _password=[[UITextField alloc] initWithFrame:CGRectMake(40, 280, self.view.frame.size.width-80, 50)];
+    _password=[[UITextField alloc] initWithFrame:CGRectMake(40, 360, self.view.frame.size.width-80, 50)];
+    _password.accessibilityIdentifier = @"password";
     _password.backgroundColor=[UIColor whiteColor];
-    _password.placeholder=[NSString stringWithFormat:@"Password"];
+    _password.placeholder=[NSString stringWithFormat:@"PassWord"];
     _password.borderStyle= UITextBorderStyleRoundedRect;
     _password.keyboardType = UIKeyboardTypeNumberPad;
     [self.view addSubview:_password];
     
     _loginButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [_loginButton setFrame:CGRectMake(60, 340, self.view.frame.size.width-120, 50)];
-    [_loginButton setTitle:@"Login" forState:UIControlStateNormal];
+    [_loginButton setFrame:CGRectMake(70, 450, self.view.frame.size.width-140, 40)];
+    [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [_loginButton setBackgroundColor:[UIColor colorWithRed:51/255.0 green:102/255.0 blue:255/255.0 alpha:1]];
     [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_loginButton addTarget:self action:@selector(pressLogin) forControlEvents:(UIControlEventTouchUpInside)];
@@ -59,7 +62,7 @@
 
 -(void) pressLogin{
     
-    NSString* strName = @"qta";
+    NSString* strName = @"Qta";
     NSString* strPass = @"123456";
     
     NSString* strTextName = _account.text;
@@ -70,6 +73,7 @@
         CGRect bounds = self.view.bounds;
         UIWebView* webView = [[UIWebView alloc] initWithFrame:bounds];
         webView.scalesPageToFit = YES;
+        webView.scrollView.accessibilityIdentifier = @"ScrollView";
         UIViewController* vcWeb = [[UIViewController alloc] init];
         [vcWeb.view addSubview:webView];
         NSString *urlStr = @"https://qtacore.github.io/qt4w/demo.html";
